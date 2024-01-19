@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple To-Do List</title>
+  <title>World Domination To-Do List</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Comic Sans MS', 'Arial', sans-serif;
+      background-color: #ffccff; /* Light pink background */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
     #todo-container {
-      max-width: 400px;
-      margin: 30px auto;
+      background-color: #ffb3b3; /* Light coral container */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #ff3399; /* Pink header */
+      text-align: center;
     }
 
     input[type="text"] {
@@ -19,13 +33,13 @@
       padding: 8px;
       margin: 5px 0;
       display: inline-block;
-      border: 1px solid #ccc;
+      border: 1px solid #ff6666; /* Dark pink border */
       box-sizing: border-box;
     }
 
     button {
       padding: 8px;
-      background-color: #4CAF50;
+      background-color: #ff6666; /* Dark pink button */
       color: white;
       border: none;
       cursor: pointer;
@@ -34,6 +48,7 @@
     ul {
       list-style-type: none;
       padding: 0;
+      margin-top: 15px;
     }
 
     li {
@@ -41,26 +56,39 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background-color: #ffcccc; /* Light pink task item */
+      padding: 8px;
+      border-radius: 5px;
     }
 
     .delete-button {
-      background-color: #f44336;
+      background-color: #ff3333; /* Dark red delete button */
     }
 
     .complete {
       text-decoration: line-through;
       color: #777;
     }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
 
 <div id="todo-container">
-  <h2>My To-Do List</h2>
-  <input type="text" id="taskInput" placeholder="New task...">
+  <h1>World Domination To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="Enter your world-domination task...">
   <button onclick="addTask()">Add</button>
 
   <ul id="taskList"></ul>
+
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Pinky_and_the_Brain.png/250px-Pinky_and_the_Brain.png" alt="Pinky and the Brain">
 </div>
 
 <script>
@@ -69,7 +97,7 @@
     const taskList = document.getElementById('taskList');
 
     if (taskInput.value.trim() === '') {
-      alert('Please enter a task.');
+      alert('Please enter a world-domination task.');
       return;
     }
 
